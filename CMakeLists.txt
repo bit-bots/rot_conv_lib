@@ -10,6 +10,14 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 find_package(Eigen3 REQUIRED)
 include_directories(${EIGEN3_INCLUDE_DIR})
 
+# Find catkin
+find_package(catkin REQUIRED)
+catkin_package(
+    INCLUDE_DIRS include
+    LIBRARIES rotconvshared rotconvstatic
+)
+
+
 # Include directories
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
