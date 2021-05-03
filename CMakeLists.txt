@@ -92,4 +92,13 @@ if(IS_DIRECTORY ${PROJECT_SOURCE_DIR}/googletest)
 	add_test(test_rot_conv test_rot_conv)
 
 endif()
+
+
+# Install everything
+install(TARGETS rotconvstatic
+        LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION})
+install(TARGETS rotconvshared
+        LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION})
+install(DIRECTORY ${PROJECT_SOURCE_DIR}/include/ DESTINATION ${CATKIN_GLOBAL_INCLUDE_DESTINATION})
+
 # EOF
